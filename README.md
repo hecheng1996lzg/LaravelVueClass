@@ -335,7 +335,7 @@ Description: User can create any item in the todo list.
 }
 ``` 
 #### c. Check To Completed (/todo_list/check/{item_id}?token={token})
-Description: Users can mark the item as completed.
+Description: Users can mark their item as completed.
 ##### Request Method: get   
 ##### Response Result:
 - Data for success:
@@ -351,7 +351,7 @@ Description: Users can mark the item as completed.
     - Body:
         - msg: "not found"
 #### d. Delete All Completed items (/todo_list/completed/all?token={token})
-Description: User can delete all completed items.
+Description: Users can delete all their completed items.
 ##### Request Method: DELETE   
 ##### Response Result:
 - Data for success:
