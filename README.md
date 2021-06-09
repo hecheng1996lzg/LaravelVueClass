@@ -199,7 +199,7 @@ Description: Get all messages under message board.
         "per_page": 3,
         "total": 11,
         "links": {
-          "previous": "/message_board?token={token}&page_number=1&page_size=3",
+          "previous": "/message_board?token={token}&page_number=1&page_size=1",
           "next": "/message_board?token={token}&page_number=3&page_size=3"
         }
       }
