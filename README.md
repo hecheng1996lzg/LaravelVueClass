@@ -143,13 +143,13 @@ Description: Get all messages under message board.
     - Body:
         - msg: "success"
         - data
-            -messages(array):
+            - messages(array):
                 - id
                 - user_id
                 - nickname
                 - datetime (format：[YYYY-mm-dd HH:mm:ss])
                 - content
-            -mate
+            - mate
                 - pagination
                     - current_page
                     - per_page
