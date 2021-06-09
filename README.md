@@ -40,7 +40,7 @@
 	    - 已完成任务列表
 	    - 清空所有已完成任务按钮
 
-##  页面API
+##  API
 ### 1. Auth
 #### a. register (/register)
 Description: User can register.
