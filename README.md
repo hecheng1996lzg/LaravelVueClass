@@ -79,7 +79,7 @@ Description: User can login.
             - age
             - profile
             - token
-            _ is_admin ( 1 / 0 )
+            - is_admin ( 1 / 0 )
 - Data for wrong data:
     - Status Code: 422
     - Body:
@@ -128,7 +128,7 @@ Description:  User can update info.
     - Status Code: 200
     - Body:
         - msg: "success"
-- Data for Unauthorized:
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -142,13 +142,22 @@ Description: Get all messages under message board.
     - Status Code: 200
     - Body:
         - msg: "success"
-        - messages(array):
-            - id
-            - user_id
-            - nickname
-            - datetime (format：[YYYY-mm-dd HH:mm:ss])
-            - content
-- Data for Unauthorized:
+        - data
+            -messages(array):
+                - id
+                - user_id
+                - nickname
+                - datetime (format：[YYYY-mm-dd HH:mm:ss])
+                - content
+            -mate
+                - pagination
+                    - current_page
+                    - per_page
+                    - total
+                    - links
+                        - previous
+                        - next
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -210,7 +219,7 @@ Description: User can create any new message.
         - msg: "success"
         - data:
             - id
-- Data for Unauthorized:
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -235,7 +244,7 @@ Description: Users can only delete their own messages. administrator can delete 
     - Status Code: 200
     - Body:
         - msg: "success"
-- Data for Unauthorized:
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -246,19 +255,20 @@ Description: Users can only delete their own messages. administrator can delete 
 
 ### 3. Todo List
 #### a. Get TodoList (/todo_list?token={token})
-Description: Get all item under todo list. 
+Description: Get all items under todo list. 
 ##### Request Method: GET  
 ##### Response Result:
 - Data for success:
     - Status Code: 200
     - Body:
         - msg: "success"
-        - items(array):
-            - id
-            - type ( "Uncompleted" / "Completed")
-            - datetime (format：[YYYY-mm-dd HH:mm:ss])
-            - content
-- Data for Unauthorized:
+        - data
+            - items(array):
+                - id
+                - type ( "Uncompleted" / "Completed")
+                - datetime (format：[YYYY-mm-dd HH:mm:ss])
+                - content
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -271,7 +281,7 @@ Description: Get all item under todo list.
 {
   "msg": "success" ,
   "data": {
-    "messages": [
+    "items": [
       {
         "id": 1 ,
         "type": "Uncompleted",
@@ -307,7 +317,7 @@ Description: User can create any item in the todo list.
         - msg: "success"
         - data:
             - id
-- Data for Unauthorized:
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -332,7 +342,7 @@ Description: Users can mark the item as completed.
     - Status Code: 200
     - Body:
         - msg: "success"
-- Data for Unauthorized:
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
@@ -348,7 +358,7 @@ Description: User can delete all completed items.
     - Status Code: 200
     - Body:
         - msg: "success"
-- Data for Unauthorized:
+- Data for unauthorized:
     - Status Code: 401
     - Body:
         - msg: "unauthorized" 
