@@ -13,19 +13,19 @@
     - 留言内容
     - 删除按钮
 ### 注册页
-- 用户名输入框
+- 账户名输入框
 - 密码输入框
 - 提交按钮
 - 返回登录按钮
 ### 登录页
-- 用户名输入框
+- 账户名输入框
 - 密码输入框
 - 登录按钮
 - 前往注册按钮
 ### 个人中心页
-- 个人用户名
+- 个人账户名
 - 资料（可编辑）
-    - 姓名
+    - 用户名
     - 出生日期
     - 年龄（根据出生日期自动计算）
     - 简介
@@ -134,7 +134,7 @@ Description:  User can update info.
         - msg: "unauthorized" 
 
 ### 2. Message Board
-#### a. Get Messages (/message_board?token={token})
+#### a. Get Messages (/message_board)
 Description: Get all messages under message board. 
 ##### Request Method: GET  
 ##### Response Result:
